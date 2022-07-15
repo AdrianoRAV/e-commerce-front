@@ -77,7 +77,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         onPressed: () {},
                         child: const Text(
-                          'Entrar',
+                          'Cadastrar Usuário',
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.white,

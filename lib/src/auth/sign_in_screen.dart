@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:quitanda/src/auth/components/custom_tex_field.dart';
 import 'package:quitanda/src/config/custom_colors.dart';
 
+import 'sign_up_screen.dart';
+
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     final size = MediaQuery.of(context).size;
-
 
     return Scaffold(
       backgroundColor: CustomColors.customSwatchColor,
@@ -49,7 +49,7 @@ class SignInScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-      
+
                     // Categorias
                     SizedBox(
                       height: 30,
@@ -76,7 +76,7 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
               ),
-      
+
               // Formulário
               Container(
                 padding: const EdgeInsets.symmetric(
@@ -96,7 +96,7 @@ class SignInScreen extends StatelessWidget {
                       icon: Icons.email,
                       label: 'Email',
                     ),
-      
+
                     //Senha
                     const CustomTextField(
                       icon: Icons.lock,
@@ -127,7 +127,7 @@ class SignInScreen extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       child: TextButton(
                         onPressed: () {},
-                        child:  Text(
+                        child: Text(
                           'Esqueeu a senha?',
                           style: TextStyle(
                             color: CustomColors.customContrastColor,
@@ -159,9 +159,9 @@ class SignInScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-      
+
                     // botão novo usuario
-      
+
                     SizedBox(
                       height: 50,
                       child: OutlinedButton(
@@ -174,7 +174,13 @@ class SignInScreen extends StatelessWidget {
                             color: Colors.green,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (c) {
+                              return SignUpScreen();
+                            }),
+                          );
+                        },
                         child: const Text(
                           'Criar conta',
                           style: TextStyle(

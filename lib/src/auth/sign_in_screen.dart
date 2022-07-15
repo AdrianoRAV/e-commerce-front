@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quitanda/src/auth/components/custom_tex_field.dart';
@@ -14,8 +15,9 @@ class SignInScreen extends StatelessWidget {
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text.rich(
+              children:  [
+                // Nome do App
+                const Text.rich(
                   TextSpan(
                     style: TextStyle(
                       fontSize: 40,
@@ -38,7 +40,32 @@ class SignInScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Text('Frutas'),
+                
+                // Categorias
+                SizedBox(
+                  height: 30,
+                  child: DefaultTextStyle(
+                    style: const TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
+                    child: AnimatedTextKit(
+                      pause: Duration.zero,
+                      repeatForever: true,
+                      animatedTexts: [
+                        
+                        FadeAnimatedText('Frutas'),
+                        FadeAnimatedText('Flores'),
+                        FadeAnimatedText('Verduras'),
+                        FadeAnimatedText('Cereais'),
+                        FadeAnimatedText('Vegetais'),
+                        FadeAnimatedText('Laticionios'),
+                        FadeAnimatedText('Legumes'),
+                      ],
+                      ),
+                  ),
+                ),
+                
               ],
             ),
           ),

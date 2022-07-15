@@ -12,11 +12,12 @@ class SignInScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-              child: Container(
-            color: Colors.green,
-          )),
-          Expanded(
-              child: Container(
+            child: Container(
+              color: Colors.green,
+            ),
+          ),
+          // Formulário
+          Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 32,
               vertical: 40,
@@ -41,7 +42,7 @@ class SignInScreen extends StatelessWidget {
                   label: 'Senha',
                   isSecret: true,
                 ),
-
+                // Botão entrar
                 SizedBox(
                   height: 50,
                   child: ElevatedButton(
@@ -59,7 +60,7 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-
+                //Esqueceu a senha
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -72,9 +73,57 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Divisor
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey.withAlpha(90),
+                          thickness: 2,
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15),
+                        child: Text('ou'),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey.withAlpha(90),
+                          thickness: 2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // botão novo usuario
+
+                SizedBox(
+                  height: 50,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      side: const BorderSide(
+                        width: 2,
+                        color: Colors.green,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Criar conta',
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
-          )),
+          ),
         ],
       ),
     );

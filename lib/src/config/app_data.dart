@@ -3,6 +3,7 @@ import 'package:quitanda/src/models/item_model.dart';
 ItemModel apple = ItemModel(
   description:
       'A melhor maçã da região e que conta com o melhor preço de qualquer quitanda. Este item conta com vitaminas essenciais para o fortalecimento corporal, resultando em uma vida saudável.',
+  
   imgUrl: 'assets/fruits/apple.png',
   itemName: 'Maçã',
   price: 5.5,

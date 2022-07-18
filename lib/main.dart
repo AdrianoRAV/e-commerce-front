@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       
         primarySwatch: CustomColors.customSwatchColor,
-        scaffoldBackgroundColor: Colors.white.withAlpha(190),
+        scaffoldBackgroundColor: Colors.grey.withAlpha(1799),
       ),
       debugShowCheckedModeBanner: false,
       home: const SignInScreen(),
